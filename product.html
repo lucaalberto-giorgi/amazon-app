@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Lucazon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">lucazon</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">
+                    <span>Cart</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <a href="account.html" class="account-link">
+                    <span id="accountText">Account</span>
+                </a>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">All</a>
+            <a href="#" class="nav-link" data-category="electronics">Electronics</a>
+            <a href="#" class="nav-link" data-category="clothing">Clothing</a>
+            <a href="#" class="nav-link" data-category="gaming">Gaming</a>
+            <a href="#" class="nav-link" data-category="home">Home & Kitchen</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main product-detail">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / 
+            <span id="productCategory"></span> / 
+            <span id="productName"></span>
+        </div>
+        
+        <div class="product-container">
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="mainProductImage" src="" alt="Product Image">
+                </div>
+                <div class="thumbnail-images" id="thumbnailImages">
+                    <!-- Thumbnails will be loaded here -->
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 id="productTitle"></h1>
+                <div class="product-rating">
+                    <span class="stars" id="productStars"></span>
+                    <span id="productReviews"></span>
+                </div>
+                <div class="product-price">
+                    <span class="price" id="productPrice"></span>
+                </div>
+                <div class="product-description" id="productDescription"></div>
+                
+                <div class="product-actions">
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <select id="productQuantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary btn-add-to-cart" id="addToCartBtn">Add to Cart</button>
+                    <button class="btn btn-secondary" id="buyNowBtn">Buy Now</button>
+                </div>
+                
+                <div class="product-details">
+                    <h3>Product Details</h3>
+                    <ul id="productDetailsList"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="sell.html">Sell products</a></li>
+                    <li><a href="affiliate.html">Become an Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="account.html">Your Account</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lucazon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>
